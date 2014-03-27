@@ -1,11 +1,12 @@
 public class Solution {  
-    public int uniquePaths(int m, int n) {  
+    public int uniquePaths(int m, int n) {
+        //Handle edge cases
         if(m==0 || n==0) return 0;  
         if(m ==1 || n==1) return 1;  
-          
+        
         int[][] path = new int[m][n];  
           
-        // 1st row only 1 path  
+        // set "base case" (or "starting case") 
         for (int i=0; i<n; i++)  
             path[0][i] = 1;  
           
